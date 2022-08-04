@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>SerializeProperty</Title>
+		 <Author>Famtosha</Author>
+            <Description>Serialize property to unity</Description>
+            <Shortcut>sp</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[[field: SerializeField] public $Type$ $Name$ { get; private set; }$end$]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>Type</ID>
+					<ToolTip>Field type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>Name</ID>
+					<ToolTip>Field name</ToolTip>
+					<Default>value</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>UnityEngine</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
