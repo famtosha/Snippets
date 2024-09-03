@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Entitas filter</Title>
+		 <Author>Famtosha</Author>
+            <Description>filter</Description>
+            <Shortcut>ef</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[ $fieldName$ = $game$.GetGroup(Matcher<GameEntity>	
+		 .AllOf(
+			GameMatcher.$matcher$));]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>fieldName</ID>
+					<ToolTip>field name</ToolTip>
+					<Default>_field</Default>
+				</Literal>
+				<Literal>
+					<ID>game</ID>
+					<ToolTip>context</ToolTip>
+					<Default>game</Default>
+				</Literal>
+				<Literal>
+					<ID>matcher</ID>
+					<ToolTip>matcher</ToolTip>
+					<Default>Matcher</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Entitas</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

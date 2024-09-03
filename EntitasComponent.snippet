@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Entitas component</Title>
+		 <Author>Famtosha</Author>
+            <Description>component</Description>
+            <Shortcut>ec</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[[$context$] public class $componentType$ : IComponent { public $valueType$ Value; }$end$]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>componentType</ID>
+					<ToolTip>component type</ToolTip>
+					<Default>ComponentName</Default>
+				</Literal>
+				<Literal>
+					<ID>valueType</ID>
+					<ToolTip>component value type</ToolTip>
+					<Default>object</Default>
+				</Literal>
+				<Literal>
+					<ID>context</ID>
+					<ToolTip>cotext name</ToolTip>
+					<Default>Game</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Entitas</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
