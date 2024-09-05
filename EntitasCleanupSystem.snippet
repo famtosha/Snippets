@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Entitas cleanup system</Title>
+		 <Author>Famtosha</Author>
+            <Description>Entitas cleanup system</Description>
+            <Shortcut>clean</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[    public class $System$ : ICleanupSystem
+    {
+        private readonly GameContext _game;
+
+        public $System$(GameContext game)
+        {
+            _game = game;
+        }
+
+        public void Cleanup()
+        {
+			$end$
+        }
+    }]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>System</ID>
+					<ToolTip>System name</ToolTip>
+					<Default>SystemName</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Entitas</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

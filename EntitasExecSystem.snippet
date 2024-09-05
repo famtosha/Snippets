@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Entitas execute system</Title>
+		 <Author>Famtosha</Author>
+            <Description>Entitas execute system</Description>
+            <Shortcut>exec</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[    public class $System$ : IExecuteSystem
+    {
+        private readonly GameContext _game;
+        private readonly IGroup<GameEntity> $Entities$;
+
+        public $System$(GameContext game)
+        {
+            _game = game;
+            $Entities$ = game.GetGroup($GameMatcher$);
+        }
+
+        public void Execute()
+        {
+            foreach (GameEntity entity in $Entities$)
+            {
+				$end$
+            }
+        }
+    }]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>System</ID>
+					<ToolTip>System name</ToolTip>
+					<Default>SystemName</Default>
+				</Literal>
+				<Literal>
+					<ID>Entities</ID>
+					<ToolTip>Entities group name</ToolTip>
+					<Default>_entities</Default>
+				</Literal>
+				<Literal>
+					<ID>GameMatcher</ID>
+					<ToolTip>Entities group filters</ToolTip>
+					<Default>GameMatcher</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>Entitas</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
