@@ -17,7 +17,9 @@
         public $System$(GameContext game)
         {
             _game = game;
-            $Entities$ = game.GetGroup($GameMatcher$);
+            $Entities$ = game.GetGroup($GameMatcher$
+				.AllOf(
+				$GameMatcher$));
         }
 
         public void Execute()

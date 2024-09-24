@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>ScriptableObject</Title>
+		 <Author>Famtosha</Author>
+            <Description>ScriptableObject</Description>
+            <Shortcut>so</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[    [CreateAssetMenu(fileName = nameof($Name$),menuName ="Configs/$Name$")]
+    public class $Name$ : ScriptableObject
+    {
+		$end$
+    }]]>
+            </Code>
+			<Declarations>
+				<Literal>
+					<ID>Name</ID>
+					<ToolTip>Scriptable object type</ToolTip>
+					<Default>Config</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+					<Namespace>UnityEngine</Namespace>
+				</Import>
+			</Imports>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
